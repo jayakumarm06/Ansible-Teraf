@@ -1,6 +1,6 @@
 ---
 - name: Gather facts for the target machine
-  hosts: all
+  hosts: testserver01
   gather_facts: yes # Ensures Ansible collects facts
   tasks:
     - name: Print all facts
