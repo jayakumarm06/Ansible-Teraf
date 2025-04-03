@@ -6,7 +6,3 @@
     - name: Print all facts
       debug:
         var: ansible_facts
-
-    - name: Show IP address
-      debug:
-        msg: "Target machine IP is {{ ansible_facts['ansible_default_ipv4']['address'] }}"
