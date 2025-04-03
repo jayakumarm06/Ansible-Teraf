@@ -1,6 +1,12 @@
 ---
-- name: Testing fact cache
-  hosts: testserver01
-  gather_facts: false
+- name: Gather facts for the target machine
+  hosts: all
+  gather_facts: yes # Ensures Ansible collects facts
   tasks:
-    - debug: var=ansible_facts
+    - name: Print all facts
+      debug:
+        var: ansible_facts
+
+    - name: Show IP address
+      debug:
+        msg: "Target machine IP is {{ ansible_facts['ansible_default_ipv4']['address'] }}"
