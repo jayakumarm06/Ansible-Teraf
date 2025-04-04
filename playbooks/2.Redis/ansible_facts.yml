@@ -1,8 +1,8 @@
 ---
-- name: Gather facts for the target machine
+- name: Use cached facts
   hosts: testserver01
-  gather_facts: yes # Ensures Ansible collects facts
+  gather_facts: no
   tasks:
-    - name: Print all facts
+    - name: Print cached OS distribution
       debug:
-        var: ansible_facts['distribution']
+        msg: "{{ ansible_facts['distribution'] }}"
