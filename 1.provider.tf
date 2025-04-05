@@ -11,7 +11,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "ansible-bucke-terraf-04"
+    bucket = "ansible-bucke-terraf-05"
     key    = "Ansible.tfstate"
     region = "us-east-1"
     # dynamodb_table = "-terraform-locks"
