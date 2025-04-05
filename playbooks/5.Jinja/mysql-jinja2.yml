@@ -34,7 +34,7 @@
       become: yes
     - name: Copy the index.j2 Template to index destination folder.
       template: >
-        src=/root/Ansible-Testing/playbooks/5.Jinja/mysql_conf.j2
+        src=/root/ansible-files/playbooks/5.Jinja/mysql_conf.j2
         dest=/etc/mysql/mysql.conf.d/mysqld.cnf
         owner=root
         group=root
@@ -52,7 +52,7 @@
       tags:
         - mysql
     - name: Copy sample data to tmp folder
-      copy: src=/root/Ansible-Testing/playbooks/5.Jinja/dump.sql dest=/tmp/dump.sql
+      copy: src=/root/ansible-files/playbooks/5.Jinja/dump.sql dest=/tmp/dump.sql
       tags:
         - mysql
     - name: Insert sample data into database
