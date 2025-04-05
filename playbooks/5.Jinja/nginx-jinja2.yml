@@ -10,11 +10,11 @@
     custom_para: "We Are Studying Ansible Templates Practically..!!!"
     aws_account: "886436923680"
     # #Dynamic variables from Ansible Facts
-    # todays_date: "{{ ansible_facts['date_time']['date'] }}"
-    # host_name: "{{ ansible_facts['hostname'] }}"
-    # fqdn_name: "{{ ansible_facts['fqdn'] }}"
-    # os_family: "{{ ansible_facts['distribution'] }}"
-    # os_dest: "{{ ansible_facts['distribution_version'] }}"
+    todays_date: "{{ ansible_facts['date_time']['date'] }}"
+    host_name: "{{ ansible_facts['hostname'] }}"
+    fqdn_name: "{{ ansible_facts['fqdn'] }}"
+    os_family: "{{ ansible_facts['distribution'] }}"
+    os_dest: "{{ ansible_facts['distribution_version'] }}"
   tags:
     - InstallNginx
   tasks:
