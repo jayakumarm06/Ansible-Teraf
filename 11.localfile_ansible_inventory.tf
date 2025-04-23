@@ -1,5 +1,5 @@
 resource "local_file" "ansible-inventory-file" {
-  content = templatefile("${path.module}/publicservers.tpl",{
+  content = templatefile("${path.module}/publicservers.tpl", {
 
     testserver01    = aws_instance.webservers.0.public_ip
     testserver02    = aws_instance.webservers.1.public_ip
@@ -9,6 +9,6 @@ resource "local_file" "ansible-inventory-file" {
     pvttestserver03 = aws_instance.webservers.2.private_ip
 
   })
-  
+
   filename = "${path.module}/invfile"
 }
