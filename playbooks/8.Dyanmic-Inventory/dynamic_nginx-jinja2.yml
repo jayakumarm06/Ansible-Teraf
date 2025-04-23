@@ -6,9 +6,9 @@
   become_user: root
   vars:
     #Static Variables
-    custom_heading: "Welcome To DevSecOps By Saikiran Pinapathruni"
+    custom_heading: "Welcome To DevSecOps By jaya kumar"
     custom_para: "We Are Studying Ansible Templates Practically..!!!"
-    aws_account: "211125710812"
+    aws_account: "886436923680"
     friends: ["sai", "avinash", "gnane"]
     #Dynamic variables from Ansible Facts
     todays_date: "{{ ansible_facts['date_time']['date'] }}"
@@ -32,7 +32,7 @@
         - install
     - name: Copy the index.j2 Template to index destination folder.
       template: >
-        src=/root/Ansible-Testing/playbooks/5.Jinja/index.j2
+        src=/root/ansible-files/playbooks/5.Jinja/index.j2
         dest=/var/www/html/index.nginx-debian.html
         owner=root
         group=root
@@ -43,7 +43,7 @@
 
     - name: Copy the style files to destination folder.
       copy: >
-        src=/root/Ansible-Testing/playbooks/5.Jinja/style.css
+        src=/root/ansible-files/playbooks/5.Jinja/style.css
         dest=/var/www/html/style.css
         owner=root
         group=root
@@ -54,7 +54,7 @@
 
     - name: Copy the javascript files to destination folder.
       copy: >
-        src=/root/Ansible-Testing/playbooks/5.Jinja/scorekeeper.js
+        src=/root/ansible-files/playbooks/5.Jinja/scorekeeper.js
         dest=/var/www/html/scorekeeper.js
         owner=root
         group=root
